@@ -72,3 +72,11 @@ docker compose up --profile backend up -d
 # start 3 replicas of the api container containers
 docker compose up --profile bakend up -d --scale api=3
 ```
+
+---
+
+## References
+
+
+- ['docker-compose' creating multiple instances for the same image](https://stackoverflow.com/questions/39663096/docker-compose-creating-multiple-instances-for-the-same-image)
+- [Docker-compose check if mysql connection is ready](https://stackoverflow.com/questions/42567475/docker-compose-check-if-mysql-connection-is-ready)
