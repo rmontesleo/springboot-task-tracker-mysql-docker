@@ -6,7 +6,12 @@ services:
     container_name: mysqldb
     ports: 
       - "3306:3306"
-      
+
+  api:
+    image: springboot-task-tracker-mysql-docker
+    ports:
+      - "8080-8085:8080"
+
 volumes: 
   springboot-task-tracker-mysql-api-volume:
 
