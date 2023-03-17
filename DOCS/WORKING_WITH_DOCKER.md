@@ -53,6 +53,24 @@ services:
       - .:/app
     command: sh mvnw spring-boot:run
 
+   demo:
+    build: 
+      context: .
+      target: development
+    profiles: ["backend"]
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env_container
+    environment:
+      - SOME_API_VAR=SOME_API_VALUE
+    volumes:
+      - .:/app
+    command: sh mvnw spring-boot:run
+
+
+
 ```
 
 #### build your production image
